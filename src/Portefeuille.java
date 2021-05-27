@@ -38,6 +38,8 @@ public class Portefeuille {
    */
   public boolean achatDevise (double montantEuros)
   {
+  	if (montantEuros < 0 ) return false ;
+  	
 	this.montant += this.getMonnaie().getValeurDeJeton() * montantEuros ;
 	return true ;
   }
